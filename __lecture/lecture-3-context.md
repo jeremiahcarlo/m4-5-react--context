@@ -152,7 +152,12 @@ Update the following components to use context
 const App = () => {
   const [user, setUser] = React.useState({ username: 'Alfalfa' });
 
-  return <Home user={user} setUser={setUser} />;
+  return (
+  <UserContext.Provider value ={{
+    user, SetUser
+  }}>
+  <Home/>
+  <>
 };
 
 const Home = ({ user, setUser }) => {
